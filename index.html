@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel, tijera</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        
+        <h1 class="titulo">Piedra, Papel y Tijeras</h1>
+        <div class="instrucciones">
+            <p>Instrucciones:</p>
+            <p>Este juego trata de un combate de tres objetos,</p>
+            <p>piedra gana a tijeras, tijeras a papel y papel a piedra.</p>  
+            <p></p>
+        </div>
+        <h2 class="subtitulo">Elige con que quieres atacar:</h2>
+        
+
+        <div class="sleccionDeObjetos tarjetas">
+
+            <input type="radio" name="objeto" id="piedra" />
+            <label class="tarjeta-de-objeto" for="piedra">
+                <p>Piedra</p>
+                <img id="piedra-foto" src="./img/piedra.png" alt="piedra"> 
+            </label>
+
+            <input type="radio" name="objeto" id="papel" />
+            <label class="tarjeta-de-objeto" for="papel">
+                <p>Papel</p>
+                <img id="papel-foto" src="./img/papel.png" alt="papel"> 
+            </label>
+
+            <input type="radio" name="objeto" id="tijeras" />
+            <label class="tarjeta-de-objeto" for="tijeras">
+                <p>Tijera</p>
+                <img id="tijera-foto" src="./img/tijeras.png" alt="tijera"> 
+            </label>
+        </div>
+
+        <button id="botonSeleccionar">Seleccionar</button>
+
+        <div class="mensajes">
+            <p id="nuevo-mensaje">Resultado:</p>
+            <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+            </section>
+        </div>
+
+        <div class="ataques">
+            <div class="ataques-jugador">
+                <p>Player Vidas:<span id="vidas-jugador">3</span></p>
+                <div id="ataques-del-jugador"></div>
+            </div>
+            <div class="ataques-enemigo">
+                <p>Pc Vidas:<span id="vidas-enemigo">3</span></p>
+                <div id="ataques-del-enemigo"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/codigo.js"></script>
+
+</body>
+</html>

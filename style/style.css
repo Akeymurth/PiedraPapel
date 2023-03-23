@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+	background-color: #13005A;
+	color: #fff;
+	font-family: 'Press Start 2P', cursive;
+	min-height: 100vh;
+}
+
+.contenedor{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contenedor p{
+    text-align: center;
+}
+
+.titulo {
+	font-size: 46px;
+	color: #fff;
+	text-shadow: 2px 6px #03C988;	/*esta etiqueta es para que se vea color detras de las letras*/
+    text-align: center;
+}
+
+.subtitulo{
+	color: #03C988;
+	font-size: 28px;
+    text-align: center;
+}
+
+input {
+	display: none;
+}
+
+input:checked + label {
+	background-color: rgb(0, 38, 255);
+}
+
+.sleccionDeObjetos{
+	display: flex;
+	gap: 10px;
+}
+
+.tarjeta-de-objeto{
+	display: flex;
+	width: 230px;
+	height: 180px;
+	background: #00337C;
+	padding: 10px;
+	box-sizing: border-box; /*esta etiqueta incluye el padding dentro del alto y ancho*/
+	margin: 10px;
+	border-radius: 20px;
+	flex-direction: row-reverse;
+	align-items: center;
+	border: 2px solid white;
+	cursor: pointer;
+}
+
+.tarjeta-de-objeto:hover{
+	background-color: #1C82AD;
+}
+.tarjeta-de-objeto img{
+	width: 150px;
+	height: 150px;
+}
+
+.tarjeta-de-objeto p{
+	writing-mode: vertical-rl;
+    text-orientation: upright;
+	font-size: 15px;
+}
+
+#botonSeleccionar{
+	width: 250px;
+	height: 45px;
+	margin: 40px 0px 0px 0px;
+	background-color:  #00337C;
+	border-radius: 10px;
+	font-family: 'Press Start 2P', cursive;
+	border-color: transparent;
+	font-size: 20px;
+	cursor: pointer;
+	color: white;
+}
+
+#botonSeleccionar:hover{
+	background-color: #1C82AD;
+}
+
+.mensajes{
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	background: #1C82AD;
+	padding: 10px;
+	margin-top: 20px;
+	border-radius: 20px;
+	align-items: center;
+	font-size: 15px;
+}
+
+#boton-reiniciar{
+	width: 200px;
+	height: 45px;
+	margin: 40px 0px 0px 0px;
+	background-color:  #0F6292;
+	border-radius: 10px;
+	font-family: 'Press Start 2P', cursive;
+	border-color: transparent;
+	font-size: 15px;
+	cursor: pointer;
+	color: white;
+}
+
+#boton-reiniciar:hover{
+	background: #03C988;
+}
+
+.ataques{
+	display: grid;
+	grid-template-columns: 350px 350px;
+	grid-gap: 80px;
+	margin-top: 20px;
+	text-align: center;
+	justify-items: center;
+}
+
+.ataques-jugador{
+	background-color: rgba(255, 255, 255, 0.1);
+    width: 350px;
+}
+
+.ataques-enemigo{
+	background-color: rgba(255, 255, 255, 0.1);
+    width: 350px;
+}
+
+@media (max-width: 900px) {
+	.tarjetas{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.tarjeta-de-objeto{
+		width: 160px;
+		height: 120px;
+	}
+	
+
+	.tarjeta-de-objeto img{
+		width: 100px;
+		height: 100px;
+	}
+
+	.tarjeta-de-objeto p{
+		font-size: 10px;
+	}
+
+	.ataques{
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+	}
+}
+
+@media (max-width: 711px) {
+	.titulo {
+		font-size: 40px;
+	}
+}
+
+
+@media (max-width: 440px) {
+	.titulo {
+		font-size: 36px;
+	}
+	
+	.subtitulo{
+		font-size: 18px;
+	}
+
+	#botonSeleccionar{
+		width: 250px;
+		height: 45px;
+	}
+}
